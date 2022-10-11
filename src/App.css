@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+* {
+    --primary-color: rgb(164, 216, 255);
+    --text-color: rgb(48, 54, 51);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: large;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-new-todo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add-new-todo__input {
+    width: 300px;
+    padding: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.add-new-todo__button {
+    padding: 3px;
+    background-color: var(--primary-color);
+    border: 1px solid black;
+    font-weight: 700;
+    cursor: pointer;
+}
+.list {
+    width: 500px;
+    margin: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    margin: 10px;
+}
+.card__wrapper {
+    height: fit-content;
+}
+.card__content {
+    word-wrap: break-word;
+    margin: 10px;
+}
+.card__content--checked {
+    text-decoration: line-through;
+    text-decoration-color: grey;
+    text-decoration-thickness: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card__delete-button {
+    width: 20px;
+    cursor: pointer;
+    background-color: #00000000;
+    border: none;
+}
+
+.card__delete-button img {
+    width: 20px;
 }
