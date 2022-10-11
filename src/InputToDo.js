@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const InputToDo = ({ addToDo }) => {
     const inputRef = useRef(null);
 
-    const addToListNewTo = () => {
+    const addToListNewTodo = () => {
         const newToDoCotent = inputRef.current.value;
         if (newToDoCotent)
             addToDo({
@@ -16,9 +16,10 @@ const InputToDo = ({ addToDo }) => {
 
     const keyDownHandler = (event) => {
         if (event.key === "Enter") {
-            addToListNewTo();
+            addToListNewTodo();
         }
     };
+
     return (
         <>
             <div className="add-new-todo">
@@ -31,7 +32,7 @@ const InputToDo = ({ addToDo }) => {
                 />
                 <button
                     className="add-new-todo__button"
-                    onClick={addToListNewTo}
+                    onClick={addToListNewTodo}
                 >
                     Add To List
                 </button>

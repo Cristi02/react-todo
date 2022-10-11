@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import ToDoCard from "./ToDoCard";
 
 const ToDoList = ({ listOfToDos, toggleTodo, deleteToDo }) => {
-    // const [showListOfToDos, setShowListOfToDos] = useState(listOfToDos);
     const showListOfToDos = listOfToDos.sort((a, b) =>
         a.done === true && b.done === false ? 1 : -1
     );
